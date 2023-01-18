@@ -12,7 +12,8 @@ data:
     #!/bin/bash
     echo "### Initializing config ###"
     if [ ! -f /prowlarr-config/config.xml ]; then
-      cp -n /init-prowlarr/config.xml /prowlarr-config/config.xml
+      touch /prowlarr-config/config.xml
+      cp -f /init-prowlarr/config.xml /prowlarr-config/config.xml
       echo "### No configuration found, intialized with default settings ###"
     fi
 kind: ConfigMap

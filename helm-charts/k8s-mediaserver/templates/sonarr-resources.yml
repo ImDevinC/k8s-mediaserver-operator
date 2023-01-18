@@ -12,7 +12,8 @@ data:
     #!/bin/bash
     echo "### Initializing config ###"
     if [ ! -f /sonarr-config/config.xml ]; then
-      cp -n /init-sonarr/config.xml /sonarr-config/config.xml
+      touch /sonarr-config/config.xml
+      cp -f /init-sonarr/config.xml /sonarr-config/config.xml
       echo "### No configuration found, intialized with default settings ###"
     fi
 kind: ConfigMap

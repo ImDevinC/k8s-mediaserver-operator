@@ -7,8 +7,9 @@ data:
   init-sabnzbd.sh: |
     #!/bin/bash
     echo "### Initializing config ###"
-    if [ ! -f /sabnzbd-config/settings.json ]; then
-      cp -n /init-sabnzbd/sabnzbd.ini /sabnzbd-config/sabnzbd.ini
+    if [ ! -f /sabnzbd-config/sabnzbd.ini ]; then
+      touch /sabnzbd-config/sabnzbd.ini
+      cp -f /init-sabnzbd/sabnzbd.ini /sabnzbd-config/sabnzbd.ini
       echo "### No configuration found, intialized with default settings ###"
     fi
   sabnzbd.ini: |

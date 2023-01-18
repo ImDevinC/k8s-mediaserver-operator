@@ -13,7 +13,8 @@ data:
     #!/bin/bash
     echo "### Initializing config ###"
     if [ ! -f /radarr-config/config.xml ]; then
-      cp -n /init-radarr/config.xml /radarr-config/config.xml
+      touch /radarr-config/config.xml
+      cp -f /init-radarr/config.xml /radarr-config/config.xml
       echo "### No configuration found, intialized with default settings ###"
     fi
 kind: ConfigMap

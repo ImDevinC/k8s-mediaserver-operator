@@ -8,7 +8,8 @@ data:
     #!/bin/bash
     echo "### Initializing config ###"
     if [ ! -f /transmission-config/settings.json ]; then
-      cp -n /init-transmission/settings.json /transmission-config/settings.json
+      touch /transmission-config/settings.json
+      cp -f /init-transmission/settings.json /transmission-config/settings.json
       echo "### No configuration found, intialized with default settings ###"
     fi
   settings.json: |
