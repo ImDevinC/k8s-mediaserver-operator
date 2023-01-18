@@ -3,6 +3,16 @@ entries:
   k8s-mediaserver:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-01-18T19:03:13.706682611Z"
+    description: A Helm chart for Kubernetes mediaserver
+    digest: 032949964d46e64cc202a43a9e6a82a738aeb236bd946c1f1ce105183e87095e
+    name: k8s-mediaserver
+    type: application
+    urls:
+    - https://github.com/ImDevinC/k8s-mediaserver-operator/releases/download/k8s-mediaserver-0.7.7/k8s-mediaserver-0.7.7.tgz
+    version: 0.7.7
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-01-18T19:00:01.401456396Z"
     description: A Helm chart for Kubernetes mediaserver
     digest: 843ce0ae7fcf1c129e2ff856b505b9611adc4814b45bcd4df1718e6b6cd887f3
