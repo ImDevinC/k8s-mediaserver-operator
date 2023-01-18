@@ -109,7 +109,7 @@ spec:
         {{- end }}
         - name: init-files-prowlarr
           configMap:
-            defaultMode: 777
+            defaultMode: 0777
             name: init-prowlarr-cm
       {{- with .Values.general.nodeSelector }}
       nodeSelector:
