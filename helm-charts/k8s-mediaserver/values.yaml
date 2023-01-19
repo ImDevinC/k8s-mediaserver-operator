@@ -20,7 +20,9 @@ general:
     # the path starting from the top level of the pv you're passing. If your share is server.local/share/, then tv is server.local/share/media/tv
     subPaths:
       tv: media/tv
-      anime: media/anime
+      anime:
+        enabled: true
+        path: media/anime
       movies: media/movies
       downloads: downloads
       transmission: transmission
