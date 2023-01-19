@@ -73,6 +73,11 @@ spec:
             - name: mediaserver-volume
               mountPath: /tv
               subPath: "{{ .Values.general.storage.subPaths.tv }}"
+          {{- if .Values.subpath.anime }}
+            - name: mediaserver-volume
+              mountPath: "/anime"
+              subPath: "{{ .Values.general.storage.subPaths.anime }}"
+          {{- end }}
           {{- with .Values.plex.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
