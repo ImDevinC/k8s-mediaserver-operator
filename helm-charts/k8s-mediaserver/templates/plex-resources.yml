@@ -42,6 +42,7 @@ spec:
           persistentVolumeClaim:
             claimName: {{ .Values.plex.volume.name }}
         {{- end }}
+      hostNetwork: {{ .Values.plex.hostNetwork }}
       containers:
         - name: {{ .Chart.Name }}
           envFrom:

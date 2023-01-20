@@ -238,6 +238,7 @@ plex:
   enabled: true
   claim: "CHANGEME"
   replicaCount: 1
+  hostNetwork: true # needed for upnp forwarding
   container:
     image: docker.io/linuxserver/plex
     nodeSelector: {}
