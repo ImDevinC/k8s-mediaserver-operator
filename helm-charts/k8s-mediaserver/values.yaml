@@ -270,3 +270,26 @@ plex:
   #  accessModes: ReadWriteOnce
   #  storage: 5Gi
   #  selector: {}
+
+
+tautulli:
+  enabled: true
+  container:
+    image: docker.io/linuxserver/tautulli
+    nodeSelector: {}
+    port: 8181
+  service:
+    type: ClusterIP
+    port: 8181
+    nodePort:
+    extraLBService: false
+    # Defines an additional LB service, requires cloud provider service or MetalLB
+  ingress:
+    enabled: true
+    annotations: {}
+    path: /tautulli
+    tls:
+      enabled: false
+      secretName: ""
+  resources: {}
+  volume: {}
