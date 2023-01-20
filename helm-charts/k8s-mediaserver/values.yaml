@@ -293,3 +293,25 @@ tautulli:
       secretName: ""
   resources: {}
   volume: {}
+
+requestrr:
+  enabled: true
+  container:
+    image: docker.io/linuxserver/requestrr
+    nodeSelector: {}
+    port: 4545
+  service:
+    type: ClusterIP
+    port: 4545
+    nodePort:
+    extraLBService: false
+    # Defines an additional LB service, requires cloud provider service or MetalLB
+  ingress:
+    enabled: true
+    annotations: {}
+    path: /requestrr
+    tls:
+      enabled: false
+      secretName: ""
+  resources: {}
+  volume: {}
